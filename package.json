@@ -1,13 +1,30 @@
 {
   "name": "postgresql-test",
   "version": "1.0.0",
-  "description": "",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "description": "PostgreSQL speed test with Node & Sequelize",
+  "private": true,
+  "author": {
+    "name": "Peter Dyumin",
+    "url": "https://github.com/peterdee"
   },
-  "keywords": [],
-  "author": "",
+  "homepage": "https://github.com/peterdee/postgresql-test",
   "license": "ISC",
+  "scripts": {
+    "start": "node -r dotenv/config ./database/sync.js && node ./index.js"
+  },
+  "engines": {
+    "node": "14.3.0",
+    "npm": "6.14.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/peterdee/postgresql-test"
+  },
+  "keywords": [
+    "Node",
+    "PostgreSQL",
+    "Sequelize"
+  ],
   "dependencies": {
     "dotenv": "^8.2.0",
     "pg": "^8.2.1",

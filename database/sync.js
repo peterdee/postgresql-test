@@ -10,9 +10,10 @@ const seeding = require('./seed');
 (async function sync() {
   try {
     await createDatabase(name);
+    let record = null;
 
     try {
-      await db.Users.findOne();
+      record = await db.Users.findOne({});
     } catch (error) {
       const {
         message = '',
@@ -28,7 +29,10 @@ const seeding = require('./seed');
       }
     }
 
-    await seeding(db);
+    if (!record) {
+      await seeding(db);
+    }
+
     console.log('-- database: ready');
     return process.exit(0);
   } catch (error) {

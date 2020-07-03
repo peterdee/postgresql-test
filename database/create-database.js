@@ -13,16 +13,15 @@ module.exports = async (name = '') => {
     stderr: checkError = '',
     stdout = '',
   } = await execPromise(`psql -l | grep ${name} | wc -l`);
-  
   if (checkError) {
-    throw new Error(checkError);
+    throw checkError;
   }
 
   // create the database
   if (!stdout || stdout.trim() === '0') {
     const { stderr: createError = '' } = await execPromise(`createdb ${name}`);
     if (createError) {
-      throw new Error(createError);
+      throw createError;
     }
     return console.log('-- database: created database');
   }
