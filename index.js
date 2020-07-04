@@ -11,7 +11,9 @@ const log = require('./utilities/log');
 
 const count = require('./queries/count');
 const multipleNoCondition = require('./queries/multiple-no-condition');
+const multipleWithCondition = require('./queries/multiple-with-condition');
 const singleNoCondition = require('./queries/single-no-condition');
+const singleWithCondition = require('./queries/single-with-condition');
 
 const { SELECT } = QueryTypes;
 
@@ -35,6 +37,12 @@ const { SELECT } = QueryTypes;
 
     // load multiple User records without any conditions
     await multipleNoCondition();
+
+    // load a single User record with conditions
+    await singleWithCondition();
+
+    // load multiple User records with conditions
+    await multipleWithCondition();
 
     return process.exit(0);
   } catch (error) {

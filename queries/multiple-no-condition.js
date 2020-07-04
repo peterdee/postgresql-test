@@ -21,7 +21,7 @@ module.exports = async () => {
       raw: true,
     });
     const timeAfter = Date.now();
-    log(`load multiple records without a condition: ${timeAfter - timeBefore} ms`);
+    log(`load multiple records without any condition: ${timeAfter - timeBefore} ms`);
     
     // RAW
     const timeRawBefore = Date.now();
@@ -32,7 +32,7 @@ module.exports = async () => {
       },
     );
     const timeRawAfter = Date.now();
-    return log(`load multiple records without a condition [RAW]: ${
+    return log(`load multiple records without any condition [RAW]: ${
       timeRawAfter - timeRawBefore
     } ms\n`);
   } catch (error) {
