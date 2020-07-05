@@ -1,4 +1,4 @@
-## PostgreSQL speed testing with Node & Sequelize
+## PostgreSQL performance testing with Node & Sequelize
 
 Testing some PostgreSQL capabilities:
 - comparing raw SQL query speeds with Sequelize
@@ -15,7 +15,7 @@ npm i
 
 ### Environment
 
-See the [.env.example](.env.example) file for more information about the required environemnt variables
+The `.env` file is required, see the [.env.example](.env.example) file for more information about the required environemnt variables
 
 ### Run
 
@@ -25,7 +25,7 @@ npm start
 
 ### Results
 
-Testing locally, on MBP 15 with 16GB RAM
+Testing locally on a MacBook Pro 15-inch (2018) with 16GB RAM
 
 ```text
 database ready
