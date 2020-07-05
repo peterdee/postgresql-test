@@ -1,7 +1,7 @@
 {
   "name": "postgresql-test",
   "version": "1.0.0",
-  "description": "PostgreSQL speed test with Node & Sequelize",
+  "description": "PostgreSQL speed testing with Node & Sequelize",
   "private": true,
   "author": {
     "name": "Peter Dyumin",

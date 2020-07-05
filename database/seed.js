@@ -1,7 +1,7 @@
 // @ts-nocheck
 const { v4 } = require('uuid');
 
-const usersAmount = Number(process.env.RECORDS) || 1000000;
+const usersAmount = Number(process.env.RECORDS) || 100000;
 
 /**
  * Numbers generator
