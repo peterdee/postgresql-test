@@ -52,4 +52,10 @@ load single record with JOIN with conditions [RAW]: 437 ms
 load multiple records with JOIN without any condition [RAW]: 1726 ms
 
 load multiple records with JOIN with conditions [RAW]: 440 ms
+
+load multiple records with JOIN without any condition (with CTE) [RAW]: 373 ms
+
+load multiple records with JOIN with conditions (with CTE) [RAW]: 221 ms
 ```
+
+Using `CTE` provides a significant performance boost
